@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom"; // Importe também o componente <Routes>
-import Home from "./components/Home/Home.jsx";
-import Sobre from "./components/Sobre/Sobre.jsx";
-import Usuario from "./components/Usuario/Usuario.jsx";
-import Login from "./components/LoginDoutor/Login.jsx";
-import LoginPaciente from "./components/LoginPaciente/LoginPaciente.jsx";
+import Home from "./pages/Home/Home.jsx";
+import Sobre from "./pages/Sobre/Sobre.jsx";
+import Usuario from "./pages/Usuario/Usuario.jsx";
+import Login from "./pages/LoginDoutor/Login.jsx";
+import LoginPaciente from "./pages/LoginPaciente/LoginPaciente.jsx";
 
 const AppRoutes = () => {
    return(
