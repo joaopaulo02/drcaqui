@@ -19,7 +19,8 @@ GO
 CREATE TABLE mchat(
 	idMchat tinyint primary key identity,
 	marco varchar(80) not null unique,
-	descricao varchar(400) not null 
+	descricao varchar(700) not null,
+	idadeLimit tinyint not null
 );
 GO
 
@@ -35,8 +36,9 @@ GO
 CREATE TABLE usuario (
 	idUsuario int primary key identity,
 	idTipoUsuario tinyint foreign key references tipoUsuario(idTipoUsuario),
-	"login" varchar(50) not null unique,
-	senha varchar(50) not null
+	nomeUsuario varchar(32) not null unique,
+	"login" varchar(32) not null unique,
+	senha varchar(32) not null
 );
 GO
 
@@ -44,8 +46,7 @@ CREATE TABLE pai(
 	idPai int primary key identity,
 	idUsuario int foreign key references usuario(idUsuario),
 	idEndereco int foreign key references endereco(idEndereco),
-	nomePai varchar(50) not null,
-	cpfPai varchar(12) not null unique
+	cpfPai varchar(32) not null unique
 );
 GO
 
@@ -53,8 +54,7 @@ CREATE TABLE mae(
 	idMae int primary key identity,
 	idUsuario int foreign key references usuario(idUsuario),
 	idEndereco int foreign key references endereco(idEndereco),
-	nomeMae varchar(50) not null,
-	cpfMae varchar(12) not null unique,
+	cpfMae varchar(32) not null,
 	gravidez binary not null,
 	zs1 binary not null,
 	a53 binary not null,
@@ -68,10 +68,11 @@ CREATE TABLE crianca(
 	idMae int foreign key references mae(idMae),
 	idPai int foreign key references pai(idPai),
 	idRaca tinyint foreign key references raca(idRaca),
-	nomeCrianca varchar(50) not null,
+	nomeCrianca varchar(32) not null,
 	dataNascimento date not null,
-	cpfCrianca varchar(12) not null unique,
+	cpfCrianca varchar(32) not null unique,
 	municipioNascimento varchar(40) not null,
+	sexo binary not null,
 	ortolani binary not null,
 	reflexoVermelho binary not null,
 	pezinho binary not null,
@@ -90,13 +91,15 @@ CREATE TABLE marcoCrianca(
 	idMarcoCrianca int primary key identity,
 	idCrianca int foreign key references crianca(idCrianca),
 	idMchat tinyint foreign key references mchat(idMchat),
-	idadeCrianca smallint not null
+	idadeCrianca smallint not null,
+	constraint marcoUnico UNIQUE(idCrianca, idMchat, idadeCrianca)
 );
 GO
 
 CREATE TABLE exame(
 	idExame int primary key identity,
 	idCrianca int foreign key references crianca(idCrianca),
+	idUsuario int foreign Key references usuario(idUsuario),
 	tituloExame varchar(50) not null,
 	descricaoExame varchar(400) not null,
 );
