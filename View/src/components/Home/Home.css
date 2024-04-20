@@ -1,0 +1,64 @@
+.welcomeHome {
+    background-color: #102F8A;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcomeHome h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: #F26F21;
+}
+
+.welcomeHomeComponents {
+    display: flex;
+    justify-content: space-between;
+    gap: 200px;
+}
+
+.welcomeHomeComponents-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    box-shadow: 5px 2px 10px #F26F21;
+    background-color: #ffffff;
+    
+}
+
+.welcomeHomeComponents-item:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.componentsHomeImgs {
+    height: 150px;
+    width: 150px;
+}
+
+.welcomeHomeComponents-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+   
+}
+.welcomeHomeComponents-component h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}

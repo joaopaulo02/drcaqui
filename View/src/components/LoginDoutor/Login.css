@@ -1,0 +1,79 @@
+.login-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #F26F21;
+  }
+  
+  .imgleft {
+    background: url(caquizinho.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left;
+    margin: 0;
+    flex: 1;
+    height: 100vh;
+  }
+  
+  .loginData {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    
+  }
+  
+  .loginForm {
+    width: 50%; 
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #102F8A;
+    padding: 20% 10%;
+    border-radius: 30px;
+    background-color: #ffffff;
+    box-shadow: 5px 10px 15px #102F8A;
+  }
+  
+  .loginForm h2 {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #102F8A;
+    margin-bottom: 20px;
+  }
+
+  .input-component {
+    border: 2px solid #102F8A;
+    border-radius: 5px;
+    height: 40px;
+    box-shadow: 0 0 5px #102F8A;
+  }
+
+  .input-component:focus {
+    outline: none;
+    border: 2px solid #102F8A;
+    box-shadow: 0 0 5px #102F8A;
+  }
+  
+  .button-component {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    background-color: #102F8A;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+.loginForm label {
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    color: #102F8A;
+    font-weight: 700px;
+    padding: 10px;
+}
