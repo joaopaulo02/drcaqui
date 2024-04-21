@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <div>
+            
             <div className='welcomeHome'>
                 <h1>Seja Bem vindo!</h1>
                 <div className='welcomeHomeComponents'> 

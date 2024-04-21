@@ -5,19 +5,16 @@ import Sobre from "./pages/Sobre/Sobre.jsx";
 import Usuario from "./pages/Usuario/Usuario.jsx";
 import Login from "./pages/LoginDoutor/Login.jsx";
 import LoginPaciente from "./pages/LoginPaciente/LoginPaciente.jsx";
-import Chatbot from "./Components/ChatBot/ChatBot.jsx";
 
 const AppRoutes = () => {
    return(
        <BrowserRouter>
            <Routes> {/* Envolver os componentes <Route> dentro de <Routes> */}
-               <Route path="/" element={<Chatbot />} exact />
+               <Route path="/" element={<Home />} exact />
                <Route path="/sobre" element={<Sobre />} />
                <Route path="/usuario" element={<Usuario />} />
                <Route path="/loginDoutor" element={<Login />} />
                <Route path="/loginPaciente" element={<LoginPaciente />} />
-               <Route path="/Chatbot" element={<Chatbot />} />
-
            </Routes>
        </BrowserRouter>
    );

@@ -2,12 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
 }
 
 .chatbot {
   width: 420px;
   right: 40px;
-  bottom: 100px;
+  bottom: 90px;
   position: fixed;
   overflow: hidden;
   background: #fff;
@@ -21,7 +23,7 @@
 }
 
 .chatbot header {
-  background: #F26F21;
+  background: #102F8A;
   padding: 16px 0;
   text-align: center;
   position: relative;
@@ -154,12 +156,21 @@
 }
 
 .chat-input span {
-  color: #102F8A;
+  color: #000;
   height: 55px;
   visibility: hidden;
   font-size: 1.35rem;
   cursor: pointer;
-  background-color: #F26F21;
+  font-size: 37px;
+}
+
+.imgCaquizinhoChatBott {
+  width: 150px;
+  padding-right: 30px;
+}
+
+.imgCaquizinhoChatBott-Header {
+  width: 60px;
 }
 
 @media(max-width:490px) {

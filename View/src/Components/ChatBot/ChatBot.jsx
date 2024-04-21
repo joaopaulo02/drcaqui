@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import "./ChatBot.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +18,10 @@ const ChatBot = () => {
     if (inputValue.trim() === '') return;
 
     // Envia a mensagem para a API
-    try {
+    const requestBody = JSON.stringify({ message: inputValue });
+      console.log('Mensagem enviada para a API:', requestBody);
+    {/*try {
+      
       const response = await fetch('sua_url_da_api', {
         method: 'POST',
         headers: {
@@ -25,7 +30,7 @@ const ChatBot = () => {
         body: JSON.stringify({ message: inputValue })
       });
       const data = await response.json();
-      
+
       // Adiciona a mensagem enviada pelo usuário
       setChatMessages(prevMessages => [
         ...prevMessages,
@@ -43,6 +48,7 @@ const ChatBot = () => {
     } catch (error) {
       console.error('Erro ao enviar mensagem:', error);
     }
+  */}
   };
 
   const handleInputChange = (event) => {
@@ -52,15 +58,19 @@ const ChatBot = () => {
   return (
     <div className={isOpen ? 'show-chatbot' : ''}>
       <button className="chatbot-toggler" onClick={toggleChat}>
-        <span className='material-symbols-outlined'>
-          {isOpen ? 'close' : 'send'}
-        </span>
+        {isOpen ? (
+          <span className='material-symbols-outlined'>
+            <i className="bi bi-x-lg"></i>
+          </span>
+        ) : (
+          <img src="dr.Caquizinho.svg" alt="Closed" className='imgCaquizinhoChatBott' />
+        )}
       </button>
       <div className={`chatbot ${isOpen ? 'open' : ''}`}>
         <header>
-          <h2>Chatbot</h2>
+          <h2>Dr. Carqui </h2>
           <span className='material-symbols-outlined' onClick={toggleChat}>
-            close
+          <img src="dr.Caquizinho.svg" alt="Closed" className='imgCaquizinhoChatBott-Header' />
           </span>
         </header>
         <ul className='chatbox'>
@@ -78,7 +88,7 @@ const ChatBot = () => {
             required
           ></textarea>
           <span className='material-symbols-outlined' onClick={sendMessage}>
-            send
+            <i class="bi bi-send"></i>
           </span>
         </div>
       </div>
