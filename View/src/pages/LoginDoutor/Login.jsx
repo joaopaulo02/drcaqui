@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import "./Login.css"
+import Chatbot from '../../Components/ChatBot/ChatBot';
 
 function Login() {
     const [username, setUsername] = useState('');
@@ -52,6 +53,7 @@ function Login() {
                     <button type="submit" className='button-component'>Entrar</button>
                 </form>
             </div>
+            <Chatbot />
         </div>
     );
 }
