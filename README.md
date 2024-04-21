@@ -1,22 +1,26 @@
-Documentação - Doutor Caqui
+# Documentação - Doutor Caqui
 
-Descrição da Aplicação:
+<h2>Descrição da Aplicação:</h2>
 
-O Doutor Caqui é um aplicativo web completo para auxiliar no acompanhamento da saúde na primeira infância. A aplicação possui três camadas principais:
-
-1. Backend Flask:
+<h3> O Doutor Caqui é um aplicativo web completo para auxiliar no acompanhamento da saúde na primeira infância. A aplicação possui três camadas principais: </h3>
+<br>
+<ol>
+    <li>
+    Backend Flask:
 
     Utiliza a API do Amazon Bedrock e o modelo Claude V2 para processar perguntas em linguagem natural e retornar respostas relevantes em formato JSON.
     Funciona como uma API REST, permitindo a integração com outros sistemas.
    ![api_ref](https://media.discordapp.net/attachments/733037083941142681/1231560480695521330/api_ref.png?ex=66376713&is=6624f213&hm=46cd7625821a5a4e176a4ac0beffcc17e7d4b0c19dd8a0be940641fb90aeb7f1&=&format=webp&quality=lossless&width=704&height=722)
-
-3. Backend C#:
+</li>
+<li>
+    Backend C#:
 
     Registra e armazena dados cadastrados dos usuários em um banco de dados MySQL.
     Inclui informações essenciais para a saúde da criança, como peso, altura, informações de vacinação, etc.
     Retorna os dados cadastrados em formato JSON para consulta e análise.
    ![db_c#](https://media.discordapp.net/attachments/733037083941142681/1231560516862738442/db_c.jpg?ex=6637671c&is=6624f21c&hm=3efa8e3bc75eedaa656ca778d99110bd5a000873a29a51df51dd89b1030220b2&=&format=webp&width=734&height=722)
-
+</li>
+<li>
 4. Frontend React:
 
     Consome a API Flask para alimentar o chatbot Doutor Caqui.
@@ -24,23 +28,28 @@ O Doutor Caqui é um aplicativo web completo para auxiliar no acompanhamento da 
     Exibe as respostas do chatbot em formato amigável e informativo.
     Consome os dados JSON gerados pelo backend C# para fornecer informações adicionais sobre a saúde da criança.
    ![chatbot_img](https://media.discordapp.net/attachments/733037083941142681/1231560480984793139/chatbot-img.png?ex=66264393&is=6624f213&hm=835a4bab2b8c177df86c6c045e150b3596c5d906043bdca024e966fcbbeb37a2&=&format=webp&quality=lossless)
-
-Funcionalidades do Doutor Caqui:
-
+</li>
+</ol>
+## Funcionalidades do Doutor Caqui:
+<ul>
+    <li>
     Chatbot:
         Responde perguntas sobre saúde na primeira infância de forma abrangente e informativa.
         Utiliza linguagem natural para facilitar a interação com os usuários.
         Adapta suas respostas de acordo com a idade da criança e o contexto da conversa.
-        
+     </li>
+    <li>
     Banco de Dados:
         Armazena dados essenciais para a saúde da criança, como peso, altura, informações de vacinação, etc.
         Permite o acompanhamento do desenvolvimento da criança ao longo do tempo.
         Facilita a geração de relatórios e análises sobre a saúde da criança.
-    
+    </li>
+    <li>
     Integração:
         A API REST do backend Flask permite a integração com outros sistemas, como prontuários eletrônicos de saúde.
         O frontend React pode ser personalizado para atender às necessidades específicas de diferentes usuários. 
-
+    </li>
+</ul>
 Benefícios do Doutor Caqui:
 
     Melhora o acesso à informação:
