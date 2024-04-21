@@ -14,12 +14,13 @@
 </li>
 <li>
     Backend C#:
-
+    
     Registra e armazena dados cadastrados dos usuários em um banco de dados MySQL.
     Inclui informações essenciais para a saúde da criança, como peso, altura, informações de vacinação, etc.
     Retorna os dados cadastrados em formato JSON para consulta e análise.
    ![db_c#](https://media.discordapp.net/attachments/733037083941142681/1231560516862738442/db_c.jpg?ex=6637671c&is=6624f21c&hm=3efa8e3bc75eedaa656ca778d99110bd5a000873a29a51df51dd89b1030220b2&=&format=webp&width=734&height=722)
 </li>
+<br>
 <li>
 4. Frontend React:
 
@@ -30,7 +31,8 @@
    ![chatbot_img](https://media.discordapp.net/attachments/733037083941142681/1231560480984793139/chatbot-img.png?ex=66264393&is=6624f213&hm=835a4bab2b8c177df86c6c045e150b3596c5d906043bdca024e966fcbbeb37a2&=&format=webp&quality=lossless)
 </li>
 </ol>
-## Funcionalidades do Doutor Caqui:
+<br>
+<h2> Funcionalidades do Doutor Caqui: </h2>
 <ul>
     <li>
     Chatbot:
@@ -50,9 +52,10 @@
         O frontend React pode ser personalizado para atender às necessidades específicas de diferentes usuários. 
     </li>
 </ul>
-Benefícios do Doutor Caqui:
+<br>
+<h2>Benefícios do Doutor Caqui: </h2>
 
-    Melhora o acesso à informação:
+    - Melhora o acesso à informação:
         Permite que os pais e responsáveis ​​tenham acesso a informações confiáveis ​​sobre a saúde da primeira infância de forma prática e acessível.
         Reduz a necessidade de consultas médicas desnecessárias.
     Promove a saúde da criança:
